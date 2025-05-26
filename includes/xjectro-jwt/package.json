@@ -1,7 +1,7 @@
 {
   "name": "@xjectro/jwt",
   "private": false,
-  "version": "1.0.8",
+  "version": "1.0.17",
   "author": "xjectro",
   "type": "module",
   "license": "MIT",
@@ -20,19 +20,22 @@
   "scripts": {
     "release": "npm version patch && npm publish"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
     }
   },
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/jsonwebtoken": "^9.0.9",
-    "@types/uuid": "^10.0.0",
     "jsonwebtoken": "^9.0.0"
   }
 }

@@ -10,9 +10,9 @@ const Toaster = (props: SonnerToasterProps) => {
       className="toaster group cursor-grab"
       style={
         {
-          "--normal-bg": "var(--surface-100)",
-          "--normal-text": "var(--typography-50)",
-          "--normal-border": "var(--surface-500)",
+          "--normal-bg": "var(oklch(--surface-100))",
+          "--normal-text": "var(oklch(--typography-50))",
+          "--normal-border": "var(oklch(--surface-500))",
         } as React.CSSProperties
       }
       {...props}

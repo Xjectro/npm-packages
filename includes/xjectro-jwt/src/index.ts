@@ -14,7 +14,7 @@ function getSecret(secretKey: SecretKey): string {
 }
 
 export function generateToken(
-  payload: Record<string, unknown>,
+  payload: string | Buffer | object,
   options: AdditionalInfo,
 ): string {
   const secretKey = getSecret(options.secret);
@@ -26,10 +26,7 @@ export function generateToken(
   return jwt.sign(payload, secretKey, signOptions);
 }
 
-export function verifyToken(
-  token: string,
-  options: AdditionalInfo,
-): JwtPayload | string {
+export function verifyToken(token: string, options: AdditionalInfo): any {
   try {
     const secretKey = getSecret(options.secret);
     return jwt.verify(token, secretKey);

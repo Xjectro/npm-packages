@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function useCountdown(targetDate: Date) {
+export function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = React.useState({
     days: 0,
     hours: 0,

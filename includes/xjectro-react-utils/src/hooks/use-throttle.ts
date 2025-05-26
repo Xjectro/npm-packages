@@ -2,10 +2,7 @@ import React from "react";
 
 type AnyFunction = (...args: unknown[]) => void;
 
-export default function useThrottle<T extends AnyFunction>(
-  func: T,
-  delay: number,
-): T {
+export function useThrottle<T extends AnyFunction>(func: T, delay: number): T {
   const lastCall = React.useRef(0);
 
   return React.useCallback(

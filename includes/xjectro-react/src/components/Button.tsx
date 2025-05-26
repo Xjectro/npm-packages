@@ -8,16 +8,16 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "border border-primary-800 text-primary-foreground bg-gradient-to-t from-primary-700 to-primary-500 transition-colors duration-300 hover:to-primary-700 hover:from-primary-500",
+          "border !border-primary-800 text-primary-foreground bg-gradient-to-t from-primary-700 to-primary-500 transition-colors duration-300 hover:to-primary-700 hover:from-primary-500",
         danger:
-          "border border-danger-800 bg-danger-500 text-white hover:bg-danger-700",
+          "border !border-danger-800 bg-danger-500 text-white hover:bg-danger-700",
         outline:
-          "border border-surface-300 bg-surface-100 hover:bg-surface-200 hover:ring-4 hover:ring-surface-300 hover:border-surface-500 text-typography-300 hover:text-typography-50",
+          "border !border-surface-300 bg-surface-100 hover:bg-surface-200 hover:ring-4 hover:ring-surface-300 hover:border-surface-500 text-typography-300 hover:text-typography-50",
         surface:
-          "bg-surface-200 border border-surface-300 hover:bg-surface-300 text-typography-300 hover:text-typography-50",
+          "bg-surface-200 border !border-surface-300 hover:bg-surface-300 text-typography-300 hover:text-typography-50",
         ghost:
           "text-typography-50 md:text-typography-500 hover:bg-ghost-500 md:hover:text-typography-50 active:bg-ghost-800",
-        link: "text-typography-50 underline-offset-4 hover:underline",
+        link: "text-primary-500 underline-offset-4 hover:underline",
         subtle: "text-primary-foreground hover:bg-primary-800",
       },
       size: {

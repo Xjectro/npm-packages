@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { cn } from "../lib";
+import { cn } from "../lib/utils";
 
 export interface CinematicCardProps extends React.ComponentProps<"span"> {
   image: {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function usePersistedState<T>(key: string, initialValue: T) {
+export function usePersistedState<T>(key: string, initialValue: T) {
   const [value, setValue] = useState<T | undefined>(undefined);
 
   useEffect(() => {

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Button } from "./Button";
+import { Button } from "./button";
 import {
   Command,
   CommandEmpty,
@@ -10,17 +10,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "./Command";
-import { Popover, PopoverContent, PopoverTrigger } from "./Popover";
+} from "./command";
+import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 import { PlusIcon, XIcon } from "lucide-react";
-import { Badge } from "./Badge";
+import { Badge } from "./badge";
 import {
   Tooltip,
   TooltipProvider,
   TooltipTrigger,
   TooltipContent,
-} from "./Tooltip";
-import { Separator } from "./Separator";
+} from "./tooltip";
+import { Separator } from "./separator";
 
 export interface SelectableListProps<T> {
   items: T[];

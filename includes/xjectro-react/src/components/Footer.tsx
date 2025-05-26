@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "../lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import { injectPropsToChildren } from "../utils";
+import { injectPropsToChildren } from "../utils/inject-props-to-children";
 
 export const footerVariants = cva("w-full p-4 gap-6", {
   variants: {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function useRelativeTime(date: Date) {
+export function useRelativeTime(date: Date) {
   const [relativeTime, setRelativeTime] = useState<string>("");
 
   const getRelativeTime = (date: Date, locale: string = "en") => {

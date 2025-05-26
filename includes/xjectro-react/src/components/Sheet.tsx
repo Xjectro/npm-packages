@@ -5,9 +5,9 @@ import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 
 import { cn } from "../lib/utils";
-import { injectPropsToChildren } from "../utils";
-import { buttonVariants } from "./Button";
-import { textVariants } from "./Text";
+import { injectPropsToChildren } from "../utils/inject-props-to-children";
+import { buttonVariants } from "./button";
+import { textVariants } from "./text";
 import { cva, type VariantProps } from "class-variance-authority";
 
 export const sheetContentVariants = cva(
@@ -173,33 +173,13 @@ function SheetItem({
   );
 }
 
-const sheetSectionVariants = cva("", {
-  variants: {
-    spacing: {
-      none: "gap-0",
-      tight: "gap-3",
-      normal: "gap-5",
-      loose: "gap-10",
-    },
-  },
-  defaultVariants: {
-    spacing: "normal",
-  },
-});
-
-type SheetSectionVariants = VariantProps<typeof sheetSectionVariants>;
-
-function SheetSection({
-  className,
-  spacing,
-  ...props
-}: React.ComponentProps<"div"> & SheetSectionVariants) {
+function SheetSection({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-section"
       className={cn(
-        "!border-surface-300 flex w-full flex-col items-start px-5 [.border-b]:pb-4 [.border-t]:pt-4",
-        sheetSectionVariants({ spacing, className }),
+        "!border-surface-300 w-full mx-auto px-5 [.border-b]:pb-4 [.border-t]:pt-4",
+        className,
       )}
       {...props}
     />

@@ -11,9 +11,9 @@ import React, {
 } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { cn } from "../lib/utils";
-import { PenIcon, CheckIcon } from "./Icons";
+import { PenIcon, CheckIcon } from "./icons";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import { Button } from "./Button";
+import { Button } from "./button";
 
 interface StepperProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {

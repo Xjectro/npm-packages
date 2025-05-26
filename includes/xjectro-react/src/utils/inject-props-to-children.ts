@@ -5,7 +5,7 @@ type InjectPropsToChildrenOptions = {
   props: Record<string, unknown>;
 };
 
-export default function injectPropsToChildren(
+export function injectPropsToChildren(
   children: React.ReactNode,
   options: InjectPropsToChildrenOptions,
 ): React.ReactNode {

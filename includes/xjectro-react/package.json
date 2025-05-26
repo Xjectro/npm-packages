@@ -1,7 +1,7 @@
 {
   "name": "@xjectro/react",
   "private": false,
-  "version": "1.1.1",
+  "version": "1.1.10",
   "description": "A React UI component library for Xjectro with Tailwind CSS, Radix UI, custom hooks, and design system utilities",
   "license": "MIT",
   "repository": {
@@ -35,40 +35,20 @@
     "release": "npm version patch && npm publish"
   },
   "exports": {
-    "./hooks": {
-      "types": "./dist/hooks/index.d.ts",
-      "import": "./dist/hooks/index.mjs",
-      "require": "./dist/hooks/index.cjs"
-    },
     "./hooks/*": {
       "types": "./dist/hooks/*.d.ts",
       "import": "./dist/hooks/*.mjs",
       "require": "./dist/hooks/*.cjs"
-    },
-    "./lib": {
-      "types": "./dist/lib/index.d.ts",
-      "import": "./dist/lib/index.mjs",
-      "require": "./dist/lib/index.cjs"
     },
     "./lib/*": {
       "types": "./dist/lib/*.d.ts",
       "import": "./dist/lib/*.mjs",
       "require": "./dist/lib/*.cjs"
     },
-    "./components": {
-      "types": "./dist/components/index.d.ts",
-      "import": "./dist/components/index.mjs",
-      "require": "./dist/components/index.cjs"
-    },
     "./components/*": {
       "types": "./dist/components/*.d.ts",
       "import": "./dist/components/*.mjs",
       "require": "./dist/components/*.cjs"
-    },
-    "./utils": {
-      "types": "./dist/utils/index.d.ts",
-      "import": "./dist/utils/index.mjs",
-      "require": "./dist/utils/index.cjs"
     },
     "./utils/*": {
       "types": "./dist/utils/*.d.ts",

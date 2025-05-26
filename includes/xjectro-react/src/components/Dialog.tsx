@@ -5,7 +5,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 
 import { cn } from "../lib/utils";
-import { buttonVariants } from "./Button";
+import { buttonVariants } from "./button";
 
 function Dialog({
   ...props

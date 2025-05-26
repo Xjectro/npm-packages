@@ -4,7 +4,7 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "../lib/utils";
-import { ScrollArea, ScrollAreaProps } from "./ScrollArea";
+import { ScrollArea, ScrollAreaProps } from "./scroll-area";
 
 const containerVariants = cva("", {
   variants: {

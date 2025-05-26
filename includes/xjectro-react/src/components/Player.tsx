@@ -11,7 +11,7 @@ import {
   DefaultVideoLayout,
 } from "@vidstack/react/player/layouts/default";
 import { useState } from "react";
-import { PlayerSkeleton } from "./Skeleton";
+import { PlayerSkeleton } from "./skeleton";
 
 export function VideoPlayer({
   poster,

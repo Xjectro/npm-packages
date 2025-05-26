@@ -81,20 +81,10 @@ ReactDOM.render(
 Use components anywhere:
 
 ```tsx
-import { Button, Card, Accordion } from "@xjectro/react";
+import { Button } from "@xjectro/react/components/button";
 
 export function Demo() {
-  return (
-    <Card>
-      <h2 className="text-xl font-bold">Hello Xjectro!</h2>
-      <Accordion>
-        <Accordion.Item title="Click me">
-          <p>Dynamic content here.</p>
-        </Accordion.Item>
-      </Accordion>
-      <Button color="primary">Click Me</Button>
-    </Card>
-  );
+  return <Button color="primary">Click Me</Button>;
 }
 ```
 
