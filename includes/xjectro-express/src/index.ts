@@ -5,7 +5,21 @@ import session from "express-session";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { Emitter } from "strict-event-emitter";
-import { ServerCoreOptions, ServerCoreEvents } from "./types/index";
+import type { CorsOptions } from "cors";
+import type { SessionOptions } from "express-session";
+
+export type ServerCoreEvents = {
+  ping: [timestamp: number];
+  listen: [url: string];
+};
+
+export interface ServerCoreOptions {
+  port: number | string;
+  cors: CorsOptions;
+  json?: { limit: string };
+  urlencoded?: { limit: string };
+  session?: SessionOptions;
+}
 
 class ServerCore extends Emitter<ServerCoreEvents> {
   app: ReturnType<typeof express> = express();

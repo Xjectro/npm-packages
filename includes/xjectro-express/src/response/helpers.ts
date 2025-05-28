@@ -1,4 +1,3 @@
-// Re-export directly to avoid the potential import problems
 import { type Response } from "express";
 import { ResponseDTO } from "../types/index";
 

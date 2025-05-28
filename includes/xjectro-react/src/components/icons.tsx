@@ -3,8 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export * from "lucide-react";
-
 export function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

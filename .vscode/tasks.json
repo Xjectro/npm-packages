@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rebuild xjectro-express package",
+      "type": "shell",
+      "command": "cd c:\\Users\\lenovo\\Desktop\\Projects\\Projects-Im-Working-On\\npm-packages && npm run build",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": []
+    }
+  ]
+}

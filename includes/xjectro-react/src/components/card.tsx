@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "../lib/utils";
-import { Text, TextProps } from "./text";
+import { Typography, TypographyProps } from "./typography";
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -36,13 +36,18 @@ function CardHeader({
   );
 }
 
-function CardTitle(props: TextProps) {
-  return <Text data-slot="card-title" {...props} />;
+function CardTitle(props: TypographyProps) {
+  return <Typography data-slot="card-title" {...props} />;
 }
 
-function CardDescription(props: TextProps) {
+function CardDescription(props: TypographyProps) {
   return (
-    <Text data-slot="card-description" color="muted" size="sm" {...props} />
+    <Typography
+      data-slot="card-description"
+      color="muted"
+      size="sm"
+      {...props}
+    />
   );
 }
 

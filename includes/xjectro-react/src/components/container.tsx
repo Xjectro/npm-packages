@@ -9,7 +9,9 @@ import { ScrollArea, ScrollAreaProps } from "./scroll-area";
 const containerVariants = cva("", {
   variants: {
     layout: {
-      main: "max-w-[var(--xjectro-container-width)] px-[var(--xjectro-container-padding)]",
+      wide: "max-w-[var(--xjectro-container-width)] px-[var(--xjectro-container-padding)]",
+      narrow:
+        "max-w-[var(--xjectro-container-width)] lg:max-w-[calc(var(--xjectro-container-width)/2)] px-[var(--xjectro-container-padding)]",
     },
     direction: {
       horizontal: "flex flex-row",

@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../lib/utils";
 
-export const textVariants = cva("", {
+export const typographyVariants = cva("", {
   variants: {
     variant: {
       shiny:
@@ -94,18 +94,18 @@ export const textVariants = cva("", {
   ],
 });
 
-export type TextVariants = VariantProps<typeof textVariants>;
+export type TypographyVariants = VariantProps<typeof typographyVariants>;
 
-export type TextProps = React.ComponentProps<React.ElementType> &
-  TextVariants & {
+export type TypographyProps = React.ComponentProps<React.ElementType> &
+  TypographyVariants & {
     asChild?: boolean;
     as?: React.ElementType;
     underline?: boolean;
   };
 
 // ForwardRef and memo for performance; accepts custom 'as' element and Radix Slot
-export const Text = React.memo(
-  React.forwardRef<HTMLElement, TextProps>((props, ref) => {
+export const Typography = React.memo(
+  React.forwardRef<HTMLElement, TypographyProps>((props, ref) => {
     const {
       as,
       asChild = false,
@@ -126,7 +126,7 @@ export const Text = React.memo(
       <Comp
         ref={ref}
         className={cn(
-          textVariants({
+          typographyVariants({
             variant,
             color,
             align,
@@ -144,4 +144,4 @@ export const Text = React.memo(
     );
   }),
 );
-Text.displayName = "Text";
+Typography.displayName = "Typography";

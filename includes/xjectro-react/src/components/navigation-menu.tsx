@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva } from "class-variance-authority";
-import { Text } from "./text";
+import { Typography } from "./typography";
 import { ChevronDownIcon } from "lucide-react";
 
 import { cn } from "../lib/utils";
@@ -178,12 +178,12 @@ function NavigationMenuListItem({
         >
           {icon}
           <div className="flex flex-col items-start gap-y-1">
-            <Text size="sm" className="leading-none">
+            <Typography size="sm" className="leading-none">
               {title}
-            </Text>
-            <Text size="sm" color="muted" lineClamp={2} leading="snug">
+            </Typography>
+            <Typography size="sm" color="muted" lineClamp={2} leading="snug">
               {children}
-            </Text>
+            </Typography>
           </div>
         </a>
       </NavigationMenuLink>

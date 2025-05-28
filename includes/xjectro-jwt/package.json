@@ -1,7 +1,7 @@
 {
   "name": "@xjectro/jwt",
   "private": false,
-  "version": "1.0.17",
+  "version": "1.0.40",
   "author": "xjectro",
   "type": "module",
   "license": "MIT",

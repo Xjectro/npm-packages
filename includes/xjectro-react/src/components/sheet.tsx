@@ -7,7 +7,7 @@ import { XIcon } from "lucide-react";
 import { cn } from "../lib/utils";
 import { injectPropsToChildren } from "../utils/inject-props-to-children";
 import { buttonVariants } from "./button";
-import { textVariants } from "./text";
+import { typographyVariants } from "./typography";
 import { cva, type VariantProps } from "class-variance-authority";
 
 export const sheetContentVariants = cva(
@@ -133,7 +133,7 @@ function SheetTitle({
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
-      className={textVariants({
+      className={typographyVariants({
         color: "foreground",
         size: "lg",
         weight: "bold",
@@ -151,7 +151,7 @@ function SheetDescription({
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"
-      className={textVariants({ color: "muted", size: "sm", className })}
+      className={typographyVariants({ color: "muted", size: "sm", className })}
       {...props}
     />
   );

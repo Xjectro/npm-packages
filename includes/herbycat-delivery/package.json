@@ -1,8 +1,9 @@
 {
   "name": "@herbycat/delivery",
   "private": false,
-  "version": "1.2.11",
+  "version": "1.2.34",
   "author": "xjectro",
+  "type": "module",
   "license": "MIT",
   "description": "@herbycat/delivery is a powerful TypeScript library for uploading, managing, and accessing media files for S3-compatible storage services. It's designed to work with AWS S3, Minio, or other S3-compatible storage solutions.",
   "repository": {
@@ -20,11 +21,22 @@
   "scripts": {
     "release": "npm version patch && npm publish"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
     }
   },
   "dependencies": {

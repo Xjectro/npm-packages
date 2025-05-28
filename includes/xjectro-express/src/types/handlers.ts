@@ -1,17 +1,9 @@
-import type {
-  Application,
-  Request,
-  Response,
-  NextFunction,
-  Router,
-} from "express";
+import type { Application, Request, Response, NextFunction } from "express";
 import type { ParamsDictionary } from "express-serve-static-core";
 import type { ParsedQs } from "qs";
 export type { ResponseDTO } from "./response";
 
 type Class<T = any> = new (...args: any[]) => T;
-
-export type { Application, Request, Response, NextFunction, Router };
 
 export type RequestHandler<
   Params = ParamsDictionary,

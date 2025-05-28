@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from "express";
 import { RoutesHandlerOptions, ResponseDTO } from "../types/index";
-import { response, exceptionResponse } from "../response";
+import { response, exceptionResponse } from "../response/helpers";
 
 export const wrapHandler = <T extends ResponseDTO>(
   fn: (
